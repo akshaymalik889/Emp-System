@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.sql.Date;
 
 @Entity
 @Table(name = "EMP_SYSTEM")
@@ -17,7 +18,9 @@ public class Employee {
 	private String address;
 	private String email;
 	private String phno;
-	private int salary;
+	private String age;
+	private double salary;
+	private Date dob;
 	
 	
 	
@@ -53,20 +56,35 @@ public class Employee {
 	public String getPhno() {
 		return phno;
 	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public Date getDob() {
+		return dob;
+	}
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
 	public void setPhno(String phno) {
 		this.phno = phno;
 	}
-	public int getSalary() {
-		return salary;
-	}
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
+	
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + ", phno=" + phno
-				+ ", salary=" + salary + "]";
+				+ ", age=" + age + ", salary=" + salary + ", dob=" + dob + "]";
 	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
 	
 	
 	

@@ -56,8 +56,10 @@
       <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">Email</th>
-      <th scope="col">Phone No</th>
+      <th scope="col">phno</th>
+       <th scope="col">Age</th>
       <th scope="col">Salary</th>
+      <th scope="col">Dob</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -68,7 +70,9 @@
       <td th:text="${e.address}"></td>
       <td th:text="${e.email}"></td>
       <td th:text="${e.phno}"></td>
+       <td th:text="${e.age}"></td>
       <td th:text="${e.salary}"></td>
+      <td th:text="${e.dob}"></td>
       <td><a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${e.id})}">Edit</a> <a
 		 class="btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${e.id})}">Delete</a></td>
     </tr>
